@@ -112,7 +112,7 @@ If at least one of them not a symbol
 
 > false
 
-#### 8.allCaps
+#### 8.allCaps(phrase)
 
 Checks if the given string is composed only with english capital letters.
 
