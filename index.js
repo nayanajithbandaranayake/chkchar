@@ -162,32 +162,23 @@ module.exports.isEnglish = (phrase) => {
 
 module.exports.allNums = (phrase) => {
   checkValid(phrase);
-  for (let char of phrase) {
-    for (let num of numbers_values) {
-      if (char !== num) return false;
-    }
-  }
-  return true;
+  const { count } = this.numbers(phrase);
+  if (count === phrase.length) return true;
+  else return false;
 };
 
 module.exports.allSymbols = (phrase) => {
   checkValid(phrase);
-  for (let char of phrase) {
-    for (let sign of symbols_values) {
-      if (char !== sign) return false;
-    }
-  }
-  return true;
+  const { count } = this.symbols(phrase);
+  if (count === phrase.length) return true;
+  else return false;
 };
 
 module.exports.allCaps = (phrase) => {
   checkValid(phrase);
-  for (let char of phrase) {
-    for (let cap of caps_values) {
-      if (char !== cap) return false;
-    }
-  }
-  return true;
+  const { count } = this.caps(phrase);
+  if (count === phrase.length) return true;
+  else return false;
 };
 
 module.exports.fullCount = (phrase) => {
