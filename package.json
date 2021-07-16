@@ -1,6 +1,6 @@
 {
   "name": "chkchars",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "You can use this package to verify whether there are caps or symbols or numbers in a string. This will will be very useful if you are making a signup system there you can check the validity of the password, username etc. Or you can use this package in anywhere to verify a string contains symbols, numbers or caps. ",
   "main": "index.js",
   "keywords": [
