@@ -193,3 +193,20 @@ module.exports.fullCount = (phrase) => {
     symbols: sign_count,
   };
 };
+
+module.exports.sliceToChunks = (phrase, number) => {
+  checkValid(phrase);
+  if (typeof number !== "number")
+    throw new Error('Provide a integer as the "number" parameter.');
+  let start = 0;
+  let end = 0;
+  let endArray = [];
+  for (let i = 0; i <= phrase.length; i += number) {
+    if (i !== 0) {
+      end = i;
+      endArray.push(phrase.slice(start, end));
+      start = i;
+    }
+  }
+  return endArray;
+};
