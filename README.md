@@ -1,6 +1,6 @@
 ## chkchar
 
-This is a utility package. You can use this to check the availibility of capitals, symbols or numbers in a string.
+This is a utility package. You can use this to check the availibility of capitals, symbols or numbers in a string and also seperate a string into chuncks.
 
 #### Methods
 
@@ -12,6 +12,7 @@ This is a utility package. You can use this to check the availibility of capital
 6. allNums(phrase)
 7. allSymbols(phrase)
 8. allCaps(phrase)
+9. sliceToChunks(phrase, number)
 
 #### Installation
 
@@ -123,3 +124,17 @@ If all the characters are english capital letters
 If at least one of them not a english capital letter
 
 > false
+
+#### 9.sliceToChunks(phrase, number)
+
+Slices a given string into chuncks of length of given "number" parameter. Remember to provide a string of length that is perfectly divided by the "number" parameter.
+
+This method returns a array of strings.
+
+If
+phrase === "dictionary"
+number === 5
+
+output
+
+> ["dicti", "onary"]
